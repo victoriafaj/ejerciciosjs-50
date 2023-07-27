@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <button onClick="verificarEntrada()">Ingresar a La Nación</button>
+
+    <script>
+        function verificarEntrada() {
+            if (window.confirm('Desea salir del sitio e ingresar al periódico La Nación?')) {
+                window.location = 'https://www.lanacion.com.ar';
+            } else {
+                window.alert('No hay problema');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

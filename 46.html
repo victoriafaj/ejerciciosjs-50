@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let depositos = [];
+        let nro, monto;
+        do {
+            nro = prompt('Ingrese nro de cliente (0 finalizar)');
+            nro = parseInt(nro);
+            if (nro != 0) {
+                monto = prompt('Ingrese monto a depositar');
+                monto = parseInt(monto);
+                depositos[nro] = monto;
+            }
+        } while (nro != 0);
+        let suma = 0;
+        let canti = 0;
+        for (let f = 0; f < depositos.length; f++) {
+            if (depositos[f] != undefined) {
+                suma = suma + depositos[f];
+                canti++;
+            }
+        }
+        document.write('Cantidad de depósitos:' + canti + '<br>');
+        document.write('Total depositado por todos los clientes:' + suma);
+    </script>
+
+</body>
+
+</html>
